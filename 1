@@ -1,0 +1,29 @@
+#include <stdio.h>;
+#include <stdlib.h>;
+#include <math.h>;
+#include <locale.h>
+
+#define M_PI       3.14159265358979323846
+
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	float r, l, h, sb, sp, v;
+	//r - радиус, l - образующая h - высота
+	//sb - площадь боковой sp- площадь полной v - объём
+	printf("Enter r\nr = ");
+	scanf_s("%g", &r);
+	printf("Enter l\nl = ");
+	scanf_s("%g", &l);
+	printf("Enter h\nh = ");
+	scanf_s("%g", &h);
+	sb = r * l * M_PI;
+	printf("sb = pi * %g * %g = %.3f", r, l, sb);
+	sp = M_PI * r * (r + l);
+	printf("\nsp = pi * %g * (%g + %g) = %.3f", r, r, l, sp);
+	v = (M_PI / 3) * r * r * h;
+	printf("\nv= 1/3 * pi * %g^2 * %g = %.3f", r, h, v);
+
+	return 54;
+}
