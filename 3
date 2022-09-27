@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	float d, a;
+	// d - диаметр круга, a - сторона квадрата
+
+	printf("Enter d of a circle\n d=");
+	scanf_s("%g", &d);
+	printf("\nEnter a of a square\n a=");
+	scanf_s("%g", &a);
+	printf("1)Will a circle fit in a square?\n");
+	//круг уместится в квадрат только тогда, когда его диаметр будет не больше стороны квадрата
+	if (d <= a) printf("Yes");
+	else printf("No");
+
+
+	printf("\n2)Will a square fit in a circle?\n");
+	//чтобы квадрат уместил в круг необходимо, чтобы его диагональ была не больше диаметра круга
+	if (sqrt(2) * a <= d) printf("Yes");
+	else printf("No");
+
+
+
+	return 4;
+
+
+}
